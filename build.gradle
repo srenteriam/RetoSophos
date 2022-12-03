@@ -1,0 +1,72 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'net.serenity-bdd.aggregator'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+tasks.withType(JavaCompile) { options.encoding = 'UTF-8' }
+tasks.withType(Test) {systemProperty "file.encoding", "UTF-8"}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+
+    }
+    ext{
+        serenityVersion = "2.4.34"
+        serenityGradleVersion = "2.4.34"
+        serenityCucumberVersion = "2.4.34"
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:$rootProject.ext.serenityGradleVersion")
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.1.16"
+        classpath "net.serenity-bdd:serenity-emailer:1.9.36"
+        classpath "net.serenity-bdd:serenity-single-page-report:2.1.4"
+    }
+
+}
+
+dependencies {
+
+    implementation  group: 'net.serenity-bdd', name: 'serenity-junit', version: "$rootProject.ext.serenityVersion"
+    implementation  group: 'net.serenity-bdd', name: 'serenity-core', version: "$rootProject.ext.serenityVersion"
+    implementation  group: 'net.serenity-bdd', name: 'serenity-cucumber6', version: "$rootProject.ext.serenityCucumberVersion"
+    implementation  group: 'net.serenity-bdd', name: 'serenity-screenplay', version: "$rootProject.ext.serenityVersion"
+    implementation  group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: "$rootProject.ext.serenityVersion"
+    implementation  group: 'net.serenity-bdd', name: 'serenity-screenplay-rest', version: "$rootProject.ext.serenityVersion"
+    implementation group: 'junit', name: 'junit', version: '4.13'
+    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '2.0.0-alpha1'
+    implementation 'com.itextpdf:itextpdf:5.5.13.2'
+}
+
+test {
+    systemProperties System.getProperties()
+    systemProperty "file.encoding", "UTF-8"
+    systemProperty "feature.file.encoding", "UTF-8"
+    systemProperty "cucumber.options",
+            System.properties.getProperty("cucumber.options")
+    systemProperty "dev.page",
+            System.properties.getProperty("dev.page")
+    testLogging.showStandardStreams = true
+    //maxParallelForks = Runtime.runtime.availableProcessors() - 1
+    finalizedBy(aggregate)
+
+}
+
+serenity {
+    reports = ["single-page-html"]
+}
