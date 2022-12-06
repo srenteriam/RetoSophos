@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Evaluar elements" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-03T00:19:20" hostname="Santiagos-MacBook-Air.local" time="108.827">
+<testsuite name="Evaluar elements" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-06T03:44:10" hostname="Santiagos-MacBook-Air.local" time="76.108">
   <properties/>
-  <testcase name="Ingresar a Elements" classname="Evaluar elements" time="108.827"/>
+  <testcase name="Ingresar a Elements" classname="Evaluar elements" time="76.108"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 39669
+  <system-err><![CDATA[Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 27883
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Dec 02, 2022 7:20:39 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Dec 05, 2022 10:44:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
