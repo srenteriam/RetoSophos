@@ -14,5 +14,6 @@
     | Age        | 30                |
     | Salary     | 1000              |
     | Department | QA                |
+    Then Valida que se creo el registro "Santiago"
 
 
