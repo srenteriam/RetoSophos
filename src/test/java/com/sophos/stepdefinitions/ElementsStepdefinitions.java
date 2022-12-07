@@ -32,4 +32,6 @@ public class ElementsStepdefinitions {
     @Then("Valida que se creo el registro {string}")
     public void validaQueSeCreoElRegistro(String text){
         theActorInTheSpotlight().should(seeThat(ValidateText.with(NAME,text),equalTo(text)));}
+
+
 }

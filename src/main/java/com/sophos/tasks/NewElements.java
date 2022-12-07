@@ -24,7 +24,8 @@ public class NewElements implements Task {
     public NewElements(DataTable data) {
         this.data = data;
         information = this.data.asMap(String.class, String.class);
-        elements = new Element(information.get("First_Name"), information.get("Last_Name"), information.get("Email"), information.get("Age"), information.get("Salary"), information.get("Department"));
+        elements = new Element(information.get("First_Name"), information.get("Last_Name"), information.get("Email"),
+                information.get("Age"), information.get("Salary"), information.get("Department"));
     }
         @Override
         public <T extends Actor> void performAs(T actor){
@@ -39,7 +40,6 @@ public class NewElements implements Task {
                     Enter.theValue(elements.getSalary()).into(SALARY).thenHit(Keys.TAB),
                     Enter.theValue(elements.getDepartment()).into(DEPARTMENT).thenHit(Keys.TAB).thenHit(Keys.ENTER),
                     Click.on(DELETE)
-
 
             );
         }
