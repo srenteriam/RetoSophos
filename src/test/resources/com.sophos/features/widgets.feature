@@ -9,4 +9,4 @@
     Given "Actor" Desea navegar a la pagina "https://demoqa.com/"
 
   Scenario: Probar funcionalidades de widgets
-    When Seleccionar fechas "December 20th, 2022" en los widgets
+    When Seleccionar fecha "12/29/2022" y seleccionar hora y fecha "December 29, 2022 6:30 PM"

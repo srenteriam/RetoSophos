@@ -13,8 +13,9 @@ public class WidgetsStepdefinitions {
     @Before
     public void setUp(){setTheStage(new OnlineCast());}
 
-    @When("Seleccionar fechas {string} en los widgets")
-    public void seleccionarFechasEnLosWidgets(String date) {
-        theActorInTheSpotlight().attemptsTo(AddDate.with(date));
+
+
+    @When("Seleccionar fecha {string} y seleccionar hora y fecha {string}")
+    public void seleccionarFechaYSeleccionarHoraYFecha(String date, String dateTime) {theActorInTheSpotlight().attemptsTo(AddDate.with(date,dateTime));
     }
 }
