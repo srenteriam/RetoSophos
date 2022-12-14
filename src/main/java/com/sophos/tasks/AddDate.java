@@ -23,7 +23,7 @@ public class AddDate implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(WidgetsPage.WIDGETS_ONE),
+                Click.on(WidgetsPage.WIDGETSONE),
                 Click.on(WidgetsPage.DATEPICKER),
                 Clear.field(WidgetsPage.DATE),
                 Enter.theValue(date).into(WidgetsPage.DATE).thenHit(Keys.ENTER),

@@ -18,4 +18,6 @@ public class WidgetsStepdefinitions {
     @When("Seleccionar fecha {string} y seleccionar hora y fecha {string}")
     public void seleccionarFechaYSeleccionarHoraYFecha(String date, String dateTime) {theActorInTheSpotlight().attemptsTo(AddDate.with(date,dateTime));
     }
+
+
 }

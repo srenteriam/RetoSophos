@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class WidgetsPage extends PageObject {
 
-    public static final Target WIDGETS_ONE = Target.the("Boton Widgets")
+    public static final Target WIDGETSONE = Target.the("Boton Widgets")
             .locatedBy("(//*[@class='card-up'])[4]");
 
     public static final Target DATEPICKER = Target.the("Boton Date picker")
