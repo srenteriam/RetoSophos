@@ -9,4 +9,9 @@ public class AlertsPage {
 
     public static final Target ALERTS = Target.the("Boton Alerts")
             .locatedBy("//span[contains(text(),'Alerts')]");
+
+    public static final Target ALERTS_ONE = Target.the("Boton Alerts One")
+            .locatedBy("(//*[@id='alertButton'])");
+
+
 }
