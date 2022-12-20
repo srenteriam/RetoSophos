@@ -20,6 +20,7 @@ public class ValidateText implements Question<String> {
     @Override
     public String answeredBy(Actor actor){
         return Text.of(target.of(text)).viewedBy(actor).asString();
+
     }
 
     public static ValidateText with(Target target, String text){

@@ -6,12 +6,9 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.SendKeystoElement;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.remote.server.handler.SendKeys;
 
 
-public class Alerts implements Task {
+public class Alerts implements Task, Performable {
 
 private String name;
 
@@ -22,18 +19,23 @@ public Alerts(String name){
 
 @Override
 public <T extends Actor> void performAs(T actor) {
+
         actor.attemptsTo(
                 Click.on(AlertsPage.ALERTS_FRAME_WINDOWS),
                 Click.on(AlertsPage.ALERTS),
                 Click.on(AlertsPage.ALERTS_ONE)
-
-
-                //Enter.keyValues()
-                //Hit.the(Keys.ENTER).into(BY)
-
+                /*Switch.toAlert().andAccept(),
+                Click.on(AlertsPage.ALERTS_TWO),
+                Wait.until(6),
+                Switch.toAlert().andAccept()
+                Click.on(AlertsPage.ALERTS_THREE),
+                Switch.toAlert().andAccept()
+                Click.on(AlertsPage.ALERTS_FOUR),
+                Switch.toAlert()*/
 
 
         );
+
 
 
         }

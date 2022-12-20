@@ -10,3 +10,4 @@ Feature: Funcionalidades de ventana alerts, frame and windows
 
   Scenario: Probar funcionalidades de alerts, time and windows
     When Probar las alertas y agregar el nombre "Santiago"
+    Then Valida que se ingreso el texto "Santiago"
