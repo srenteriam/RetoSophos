@@ -1,4 +1,4 @@
-#Autor: srenteriamontoya@gmai.com
+#Autor: srenteriamontoya@gmail.com
 @Punto3
 Feature: Funcionalidades de ventana alerts, frame and windows
   Yo como automatizador de pruebas
