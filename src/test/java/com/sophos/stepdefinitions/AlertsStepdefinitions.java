@@ -37,6 +37,6 @@ public class AlertsStepdefinitions {
 
     @Then("Valida que se ingreso el texto {string}")
     public void validaQueSeIngresoElTexto(String text){
-        theActorInTheSpotlight().should(seeThat(ValidateText.with(NAME,text),equalTo(text)));
+        theActorInTheSpotlight().should(seeThat(ValidateText.with(NAME,text),equalTo("You entered " + text)));
     }
 }

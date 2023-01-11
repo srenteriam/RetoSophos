@@ -23,7 +23,7 @@ public class AlertsPage {
             .locatedBy("(//*[@id='promtButton'])");
 
     public static final Target NAME = Target.the("Nombre")
-            .locatedBy("//*[contains(text(), '{0}')]");
+            .locatedBy("//*[contains(text(), 'You entered ')]");
 
 
 }
